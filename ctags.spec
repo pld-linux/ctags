@@ -4,7 +4,7 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	5.0.1
+Version:	5.1
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -70,7 +70,7 @@ de kullanýlabilir.
 
 %prep
 %setup -q
-%patch -p0
+#%patch -p0
 
 %build
 autoconf
