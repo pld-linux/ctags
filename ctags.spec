@@ -1,17 +1,17 @@
-Summary:     Exuberant ctags -- C cross-reference tool
-Summary(de): Exuberant ctags - C-Cross-Reference-Tool 
-Summary(fr): ctags exubérant
-Summary(pl): ctags - generator list odwo³añ
-Summary(tr): C dili için çapraz-baþvuru (cross-reference) aracý
-Name:        ctags
-Version:     3.0.3
-Release:     2
-Copyright:   GPL
-Group:       Development/Tools
-Group(pl):   Programowanie/Narzêdzia
-Source:      ftp://ftp.revnet.com/pub/ctags/archives/%{name}-%{version}.tar.gz
-URL:         http://darren.hiebert.com/ctags
-Buildroot:   /tmp/%{name}-%{version}-root
+Summary:	Exuberant ctags -- C cross-reference tool
+Summary(de):	Exuberant ctags - C-Cross-Reference-Tool 
+Summary(fr):	ctags exubérant
+Summary(pl):	ctags - generator list odwo³añ
+Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
+Name:		ctags
+Version:	3.0.3
+Release:	3
+Copyright:	GPL
+Group:		Development/Tools
+Group(pl):	Programowanie/Narzêdzia
+URL:		http://darren.hiebert.com/ctags
+Source:		ftp://ftp.revnet.com/pub/ctags/archives/%{name}-%{version}.tar.gz
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 A better ctags which generates tags for all possible tag types: macro
@@ -68,26 +68,38 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 make prefix=$RPM_BUILD_ROOT/usr install
 
 rm -f $RPM_BUILD_ROOT/usr/man/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/man/man1/etags.1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+strip $RPM_BUILD_ROOT/usr/bin/*
+
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+	 FAQ NEWS QUOTES README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(644, root, root, 755) %doc FAQ NEWS QUOTES README
-%attr(755, root, root) /usr/bin/*
-%attr(644, root,  man) /usr/man/man1/*
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) /usr/bin/*
+/usr/man/man1/*
 
 %changelog
-* Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [3.0.3-3]
+- added gzipping docimentation
+- removed man group grom man pages
+- added stripping binaries
+- added %defattr(644,root,root,755)
+
+* Tue Jan 26 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [3.0-2]
-- changed "Group" to /Development/Tools
-- added "Group(pl)"
+- changed Group to /Development/Tools
+- added Group(pl)
 
 * Fri Dec 11 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.0-1]
