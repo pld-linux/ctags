@@ -96,10 +96,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
-%changelog
-* Sun May 30 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.2.2-1]
-- based on RH spec,
-- spec rewrited by PLD team,
-- pl translation by Wojciech "Sas" Ciêciwa <cieciwa@zarz.agh.edu.pl>.
