@@ -16,53 +16,55 @@ URL:		http://darren.hiebert.com/ctags/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Ctags generates an index (or tag) file of C language objects found in C
-source and header files. The index makes it easy for text editors or other
-utilities to locate the indexed items. Ctags can also generate a cross
-reference file which lists information about the various objects found in a
-set of C language files in human readable form. Exuberant Ctags improves on
-ctags because it can find all types of C language tags, including macro
-definitions, enumerated values (values inside enum{...}), function and
-method definitions, enum/struct/union tags, external function prototypes,
-typedef names and variable declarations. Exuberant Ctags is far less likely
-to be fooled by code containing #if preprocessor conditional constructs
-than ctags. Exuberant ctags supports output of emacs style TAGS files and
-can be used to print out a list of selected objects found in source files.
+Ctags generates an index (or tag) file of C language objects found in
+C source and header files. The index makes it easy for text editors or
+other utilities to locate the indexed items. Ctags can also generate a
+cross reference file which lists information about the various objects
+found in a set of C language files in human readable form. Exuberant
+Ctags improves on ctags because it can find all types of C language
+tags, including macro definitions, enumerated values (values inside
+enum{...}), function and method definitions, enum/struct/union tags,
+external function prototypes, typedef names and variable declarations.
+Exuberant Ctags is far less likely to be fooled by code containing #if
+preprocessor conditional constructs than ctags. Exuberant ctags
+supports output of emacs style TAGS files and can be used to print out
+a list of selected objects found in source files.
 
 %description -l de
-Ein verbessertes ctags, das tags für alle möglichen tag-Typen generiert:
-Makrodefinitionen, aufgezählte Werte (Werte in enum{...}), Funktions- und
-Methodendefinitionen, enum/struct/union-tags, externe Funktionsprototypen
-(wahlweise), typedefs und variable Deklarationen. Es läßt sich weit weniger
-gut durch Code täuschen, der #if-Präprozessor-Bedingungen enthält, dank
-eines konditionalen Pfadauswahlalgorithmus, der komplizierte Entscheidungen
-trifft, und eines Ausweiche-Algorithmus, der ins Spiel kommt, wenn der
-erste dem Problem nicht gewachsen ist. Kann auch benutzt werden, um eine
-Liste ausgewählter Objekte, die in Quelldateien gefunden wurden,
+Ein verbessertes ctags, das tags für alle möglichen tag-Typen
+generiert: Makrodefinitionen, aufgezählte Werte (Werte in enum{...}),
+Funktions- und Methodendefinitionen, enum/struct/union-tags, externe
+Funktionsprototypen (wahlweise), typedefs und variable Deklarationen.
+Es läßt sich weit weniger gut durch Code täuschen, der
+#if-Präprozessor-Bedingungen enthält, dank eines konditionalen
+Pfadauswahlalgorithmus, der komplizierte Entscheidungen trifft, und
+eines Ausweiche-Algorithmus, der ins Spiel kommt, wenn der erste dem
+Problem nicht gewachsen ist. Kann auch benutzt werden, um eine Liste
+ausgewählter Objekte, die in Quelldateien gefunden wurden,
 auszudrucken.
 
 %description -l fr
-un ctags amélioré générant des tags pour tous les types de tags possibles :
-définitions de macros, valeurs énumérées (valeurs dans enum{...}),
-définitions de fonctions et de méthodes, enum/struct/union tags, prototypes
-de fonctions externes (optionnel), typedefs, et déclarations de variables.
-Peut aussi être utilisé pour afficher une liste des objets choisis trouvés
-dans les fichiers source.
+un ctags amélioré générant des tags pour tous les types de tags
+possibles : définitions de macros, valeurs énumérées (valeurs dans
+enum{...}), définitions de fonctions et de méthodes, enum/struct/union
+tags, prototypes de fonctions externes (optionnel), typedefs, et
+déclarations de variables. Peut aussi être utilisé pour afficher une
+liste des objets choisis trouvés dans les fichiers source.
 
 %description -l pl
 Generator tabeli odwo³añ dla: makr, zmiennych, funkcji i procedur,
 definicji typów, metod (C++) itp. U¿ywany do generacji listy
-wyspecyfikowanych obiektów znalezionych w plikach ¼ród³owych. Tablica owych
-odwo³añ mo¿e byæ wykorzystywana przez wiekszosæ standardowych edytorów
-tekstu (vim, joe, emacs), do przemieszczania siê w ¼ród³ach miêdzy
-deklaracj± i u¿yciem danego symbolu.
+wyspecyfikowanych obiektów znalezionych w plikach ¼ród³owych. Tablica
+owych odwo³añ mo¿e byæ wykorzystywana przez wiekszosæ standardowych
+edytorów tekstu (vim, joe, emacs), do przemieszczania siê w ¼ród³ach
+miêdzy deklaracj± i u¿yciem danego symbolu.
 
 %description -l tr
 Olabilecek her türlü etiket çeþitleri - makro tanýmlamalarý, sayýlý
-(enumerated) deðerler, fonksiyon ve yöntem (method) tanýmlamalarý, tip ve
-deðiþken tanýmlarý - için etiketler üretir. Kaynak kodlarýnda bulunan,
-seçilmiþ nesnelerin listesinin çýktýsýný yazýcýdan almak için de
-kullanýlabilir.
+(enumerated) deðerler, fonksiyon ve yöntem (method) tanýmlamalarý, tip
+ve deðiþken tanýmlarý - için etiketler üretir. Kaynak kodlarýnda
+bulunan, seçilmiþ nesnelerin listesinin çýktýsýný yazýcýdan almak için
+de kullanýlabilir.
 
 %prep
 %setup -q
