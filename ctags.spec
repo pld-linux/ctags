@@ -71,7 +71,7 @@ liste des objets choisis trouvés dans les fichiers source.
 Generator tabeli odwo³añ dla: makr, zmiennych, funkcji i procedur,
 definicji typów, metod (C++) itp. U¿ywany do generacji listy
 wyspecyfikowanych obiektów znalezionych w plikach ¼ród³owych. Tablica
-owych odwo³añ mo¿e byæ wykorzystywana przez wiekszosæ standardowych
+owych odwo³añ mo¿e byæ wykorzystywana przez wiêkszosæ standardowych
 edytorów tekstu (vim, joe, emacs), do przemieszczania siê w ¼ród³ach
 miêdzy deklaracj± i u¿yciem danego symbolu.
 
