@@ -73,6 +73,8 @@ de kullanýlabilir.
 
 %build
 autoconf
+cp /usr/share/automake/install-sh .
+cp /usr/share/automake/config.sub .
 %configure
 
 %{__make}
