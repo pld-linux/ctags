@@ -80,7 +80,7 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install prefix=$RPM_BUILD_ROOT%{_prefix} \
+%{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} 
 
