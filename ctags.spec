@@ -4,9 +4,9 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	3.3.2
+Version:	3.4
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 Source:		http://home.HiWAAY.net/~darren/archives/%{name}-%{version}.tar.gz
