@@ -11,7 +11,7 @@ Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Source0:	http://ctags.sourceforge.net/archives/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-glibc.patch
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf
