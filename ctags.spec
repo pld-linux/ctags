@@ -12,7 +12,7 @@ Group(pl):	Programowanie/Narzêdzia
 Source:		http://home.HiWAAY.net/~darren/archives/%{name}-%{version}.tar.gz
 Patch:		ctags-glibc.patch
 URL:		http://darren.hiebert.com/ctags/
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Ctags generates an index (or tag) file of C language objects found in C
