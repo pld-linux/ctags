@@ -5,9 +5,10 @@ Summary(pl): ctags - generator list odwo³añ
 Summary(tr): C dili için çapraz-baþvuru (cross-reference) aracý
 Name:        ctags
 Version:     3.0.3
-Release:     1
+Release:     2
 Copyright:   GPL
-Group:       Development/Languages
+Group:       Development/Tools
+Group(pl):   Programowanie/Narzêdzia
 Source:      ftp://ftp.revnet.com/pub/ctags/archives/%{name}-%{version}.tar.gz
 URL:         http://darren.hiebert.com/ctags
 Buildroot:   /tmp/%{name}-%{version}-root
@@ -83,6 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+  [3.0-2]
+- changed "Group" to /Development/Tools
+- added "Group(pl)"
+
 * Fri Dec 11 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.0-1]
 - added gzipping man pages,
