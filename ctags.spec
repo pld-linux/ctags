@@ -5,7 +5,7 @@ Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
 Version:	3.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
@@ -28,8 +28,6 @@ to be fooled by code containing #if preprocessor conditional constructs than
 ctags.  Exuberant ctags supports output of emacs style TAGS files and can be
 used to print out a list of selected objects found in source files.
                                                                                                               
-Install ctags if you are going to use your system for C programming.                                          
-
 %description -l de
 Ein verbessertes ctags, das tags für alle möglichen tag-Typen generiert:
 Makrodefinitionen, aufgezählte Werte (Werte in enum{...}), Funktions- und
@@ -70,7 +68,7 @@ kullanýlabilir.
 
 %build
 autoconf
-LDFLAGS="-s" ; export LDFLAGS
+LDFLAGS="-s"; export LDFLAGS
 %configure
 
 make
