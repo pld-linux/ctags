@@ -5,7 +5,7 @@ Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
 Version:	3.5.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Group(fr):	Development/Outils
