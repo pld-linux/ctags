@@ -134,12 +134,10 @@ Exuberant Ctags п╕дтриму╓ вив╕д файлу TAGS у стил╕ Emacs ╕ може бути
 cp -f %{_datadir}/automake/install-sh .
 cp -f %{_datadir}/automake/config.sub .
 %configure
-
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
