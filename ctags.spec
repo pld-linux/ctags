@@ -4,7 +4,7 @@ Summary(fr): ctags exubérant
 Summary(pl): ctags - generator list odwo³añ
 Summary(tr): C dili için çapraz-baþvuru (cross-reference) aracý
 Name:        ctags
-Version:     2.3.2
+Version:     3.0
 Release:     1
 Copyright:   GPL
 Group:       Development/Languages
@@ -60,12 +60,18 @@ kullanýlabilir.
 %setup -q
 
 %build
-CFLAGS=$RPM_OPT_FLAGS ./configure --prefix=/usr
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
-strip ctags
+CFLAGS=$RPM_OPT_FLAGS LDFLAGS="-s" \
+./configure \
+	--prefix=/usr
+make
 
 %install
+rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT/usr install
+
+rm -f $RPM_BUILD_ROOT/usr/man/man1/etags.1
+echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/man/man1/etags.1
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,6 +82,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Fri Dec 11 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [3.0-1]
+- added gzipping man pages,
+- added using LDFLAGS="-s" to ./configure enviroment.
+- etags(1) man page is now maked as nroff include to ctags(1) instead
+  making sym link to ctags.1 (this allow compress man pages).
+
 * Wed Aug 26 1998 Wojciech "Sas" Ciêciwa <cieciwa@zarz.agh.edu.pl>
   [2.3.1-1]
 - changed Buildroot to /tmp/%%{name}-%%{version}-root,
