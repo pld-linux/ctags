@@ -4,13 +4,13 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	3.2.2
+Version:	3.3.1
 Release:	1
 Copyright:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 Source:		ftp://ftp.revnet.com/pub/ctags/%{name}-%{version}.tar.gz
-patch0:		ctags-glibc.patch
+Patch:		ctags-glibc.patch
 URL:		http://darren.hiebert.com/ctags/
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -66,24 +66,24 @@ kullanýlabilir.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -p0
 
 %build
 autoconf
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix}
+LDFLAGS="-s" ; export LDFLAGS
+%configure
+
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT%{_prefix} install
+make install prefix=$RPM_BUILD_ROOT%{_prefix} \
+	bindir=$RPM_BUILD_ROOT%{_bindir} \
+	mandir=$RPM_BUILD_ROOT%{_mandir} 
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
-
-strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	 FAQ NEWS QUOTES README
