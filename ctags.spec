@@ -4,8 +4,8 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	3.2
-Release:	2
+Version:	3.2.1
+Release:	1
 Copyright:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
@@ -80,12 +80,12 @@ rm -rf $RPM_BUILD_ROOT
 
 make prefix=$RPM_BUILD_ROOT/usr install
 
-rm -f $RPM_BUILD_ROOT/usr/man/man1/etags.1
-echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/man/man1/etags.1
+rm -f $RPM_BUILD_ROOT/usr/share/man/man1/etags.1
+echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/share/man/man1/etags.1
 
 strip $RPM_BUILD_ROOT/usr/bin/*
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
 	 FAQ NEWS QUOTES README
 
 %clean
@@ -95,9 +95,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) /usr/bin/*
-/usr/man/man1/*
+/usr/share/man/man1/*
 
 %changelog
+* Tue May 11 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [3.2.1-1]
+- now package is FHS 2.0 compiliat.
+
 * Wed Apr 28 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.2-2]
 - added patch for glibc 2.1,
