@@ -4,12 +4,12 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	3.2.1
+Version:	3.2.2
 Release:	1
 Copyright:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
-Source:		ftp://ftp.revnet.com/pub/ctags/archives/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.revnet.com/pub/ctags/%{name}-%{version}.tar.gz
 patch0:		ctags-glibc.patch
 URL:		http://darren.hiebert.com/ctags/
 Buildroot:	/tmp/%{name}-%{version}-root
@@ -72,13 +72,13 @@ kullanýlabilir.
 autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
-	--prefix=/usr
+	--prefix=%{_prefix}
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT/usr install
+make prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
@@ -98,53 +98,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
-* Tue May 11 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.2.1-1]
-- now package is FHS 2.0 compliant.
-
-* Wed Apr 28 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.2-2]
-- added patch for glibc 2.1,
-- recompiled on new rpm.
-
-* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
-  [3.0.3-3]
-- added gzipping docimentation
-- removed man group grom man pages
-- added stripping binaries
-- added %defattr(644,root,root,755)
-
-* Tue Jan 26 1999 Micha³ Kuratczyk <kura@pld.org.pl>
-  [3.0-2]
-- changed Group to /Development/Tools
-- added Group(pl)
-
-* Fri Dec 11 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.0-1]
-- added gzipping man pages,
-- added using LDFLAGS="-s" to ./configure enviroment.
-- etags(1) man page is now maked as nroff include to ctags(1) instead
-  making sym link to ctags.1 (this allow compress man pages).
-
-* Wed Aug 26 1998 Wojciech "Sas" Ciêciwa <cieciwa@zarz.agh.edu.pl>
-  [2.3.1-1]
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added URL,
-- changed base Source URL to ftp://ftp.revnet.com/pub/ctags/,
-- added pl translation.
- 
-* Fri Apr 24 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Thu Apr 09 1998 Cristian Gafton <gafton@redhat.com>
-- upgraded to 2.0.3
-
-* Mon Nov 03 1997 Michael K. Johnson <johnsonm@redhat.com>
-- removed etags.  Emacs provides its own; and needs to support
-  more than just C.
-
-* Thu Oct 23 1997 Donnie Barnes <djb@redhat.com>
-- updated from 1.5 to 1.6
-
-* Thu Jul 10 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
+* Sun May 30 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [3.2.2-1]
+- based on RH spec,
+- spec rewrited by PLD team,
+- pl translation by Wojciech "Sas" Ciêciwa <cieciwa@zarz.agh.edu.pl>.
