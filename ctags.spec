@@ -10,9 +10,6 @@ Version:	5.2.1
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf
