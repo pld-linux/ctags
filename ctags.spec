@@ -4,7 +4,7 @@ Summary(fr): ctags exubérant
 Summary(pl): ctags - generator list odwo³añ
 Summary(tr): C dili için çapraz-baþvuru (cross-reference) aracý
 Name:        ctags
-Version:     3.0
+Version:     3.0.3
 Release:     1
 Copyright:   GPL
 Group:       Development/Languages
@@ -71,6 +71,7 @@ make prefix=$RPM_BUILD_ROOT/usr install
 
 rm -f $RPM_BUILD_ROOT/usr/man/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/man/man1/etags.1
+
 gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
 
 %clean
