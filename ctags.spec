@@ -1,6 +1,6 @@
 Summary:	Exuberant ctags -- C cross-reference tool
 Summary(de):	Exuberant ctags - C-Cross-Reference-Tool
-Summary(es):	Ctags ¡exuberantes! Herramienta de referencia cruzada para C
+Summary(es):	ctags - generador de listas de referencia
 Summary(fr):	ctags exubérant
 Summary(ko):	¿©·¯ ¾ğ¾î·Î µÈ ¼Ò½º ÄÚµå¿¡ »öÀÎÀ» ¸¸µé¾îÁÖ´Â µµ±¸
 Summary(pl):	ctags - generator list odwo³añ
