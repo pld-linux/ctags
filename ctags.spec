@@ -5,13 +5,14 @@ Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
 Version:	4.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	http://home.HiWAAY.net/~darren/archives/%{name}-%{version}.tar.gz
-Patch0:		ctags-glibc.patch
+Patch0:		%{name}-glibc.patch
 URL:		http://darren.hiebert.com/ctags/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,7 +73,6 @@ de kullanýlabilir.
 
 %build
 autoconf
-LDFLAGS="-s"; export LDFLAGS
 %configure
 
 %{__make}
@@ -80,15 +80,15 @@ LDFLAGS="-s"; export LDFLAGS
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install prefix=$RPM_BUILD_ROOT%{_prefix} \
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} 
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	 FAQ NEWS QUOTES README
+gzip -9nf FAQ NEWS QUOTES README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
