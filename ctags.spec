@@ -14,6 +14,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5: 87ea63fbab726073b5d1c42701399581
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
