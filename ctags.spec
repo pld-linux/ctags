@@ -14,6 +14,7 @@ Group(pl):	Programowanie/Narzêdzia
 Source0:	http://ctags.sourceforge.net/archives/%{name}-%{version}.tar.gz
 Patch0:		%{name}-glibc.patch
 URL:		http://ctags.sourceforge.net/
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -73,8 +74,8 @@ de kullanýlabilir.
 
 %build
 autoconf
-cp /usr/share/automake/install-sh .
-cp /usr/share/automake/config.sub .
+cp -f /usr/share/automake/install-sh .
+cp -f /usr/share/automake/config.sub .
 %configure
 
 %{__make}
