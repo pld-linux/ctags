@@ -92,7 +92,7 @@ de kullanýlabilir.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 cp -f %{_datadir}/automake/install-sh .
 cp -f %{_datadir}/automake/config.sub .
 %configure
