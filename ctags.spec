@@ -6,7 +6,7 @@ Summary(pl):	ctags - generator list odwo³añ
 Summary(pt_BR):	Ctags exuberantes! Ferramenta de referência cruzada para C
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	5.2.1
+Version:	5.2.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -110,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
-gzip -9nf FAQ NEWS QUOTES README
+gzip -9nf FAQ NEWS README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
