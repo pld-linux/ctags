@@ -4,24 +4,31 @@ Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
 Summary(tr):	C dili için çapraz-baþvuru (cross-reference) aracý
 Name:		ctags
-Version:	3.0.3
-Release:	3
+Version:	3.2
+Release:	2
 Copyright:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
-URL:		http://darren.hiebert.com/ctags
 Source:		ftp://ftp.revnet.com/pub/ctags/archives/%{name}-%{version}.tar.gz
+patch0:		ctags-glibc.patch
+URL:		http://darren.hiebert.com/ctags/
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
-A better ctags which generates tags for all possible tag types: macro
+Ctags generates an index (or tag) file of C language objects found in C
+source and header files.  The index makes it easy for text editors or other
+utilities to locate the indexed items.  Ctags can also generate a cross
+reference file which lists information about the various objects found in a
+set of C language files in human readable form.  Exuberant Ctags improves on
+ctags because it can find all types of C language tags, including macro
 definitions, enumerated values (values inside enum{...}), function and
-method definitions, enum/struct/union tags, external function prototypes
-(optional), typedefs, and variable declarations. It is far less easily
-fooled by code containing #if preprocessor conditional constructs, using a
-conditional path selection algorithm to resolve complicated choices, and a
-fall-back algorithm when this one fails. Can also be used to print out a
-list of selected objects found in source files.
+method definitions, enum/struct/union tags, external function prototypes,
+typedef names and variable declarations.  Exuberant Ctags is far less likely
+to be fooled by code containing #if preprocessor conditional constructs than
+ctags.  Exuberant ctags supports output of emacs style TAGS files and can be
+used to print out a list of selected objects found in source files.
+                                                                                                              
+Install ctags if you are going to use your system for C programming.                                          
 
 %description -l de
 Ein verbessertes ctags, das tags für alle möglichen tag-Typen generiert:
@@ -59,9 +66,11 @@ kullanýlabilir.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-CFLAGS=$RPM_OPT_FLAGS LDFLAGS="-s" \
+autoconf
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure \
 	--prefix=/usr
 make
@@ -89,6 +98,11 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1/*
 
 %changelog
+* Wed Apr 28 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [3.2-2]
+- added patch for glibc 2.1,
+- recompiled on new rpm.
+
 * Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
   [3.0.3-3]
 - added gzipping docimentation
