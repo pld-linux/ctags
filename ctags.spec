@@ -1,5 +1,5 @@
 Summary:	Exuberant ctags -- C cross-reference tool
-Summary(de):	Exuberant ctags - C-Cross-Reference-Tool 
+Summary(de):	Exuberant ctags - C-Cross-Reference-Tool
 Summary(es):	Ctags ¡exuberantes! Herramienta de referencia cruzada para C
 Summary(fr):	ctags exubérant
 Summary(pl):	ctags - generator list odwo³añ
@@ -105,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
-	mandir=$RPM_BUILD_ROOT%{_mandir} 
+	mandir=$RPM_BUILD_ROOT%{_mandir}
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
