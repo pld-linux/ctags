@@ -83,7 +83,7 @@ make prefix=$RPM_BUILD_ROOT/usr install
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
-strip $RPM_BUILD_ROOT/usr/bin/*
+strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	 FAQ NEWS QUOTES README
@@ -94,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
