@@ -80,12 +80,12 @@ rm -rf $RPM_BUILD_ROOT
 
 make prefix=$RPM_BUILD_ROOT/usr install
 
-rm -f $RPM_BUILD_ROOT/usr/share/man/man1/etags.1
-echo ".so ctags.1" > $RPM_BUILD_ROOT/usr/share/man/man1/etags.1
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
+echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
 strip $RPM_BUILD_ROOT/usr/bin/*
 
-gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	 FAQ NEWS QUOTES README
 
 %clean
@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) /usr/bin/*
-/usr/share/man/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Tue May 11 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
