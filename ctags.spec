@@ -4,9 +4,11 @@ Summary(es):	Ctags ║exuberantes! Herramienta de referencia cruzada para C
 Summary(fr):	ctags exubИrant
 Summary(pl):	ctags - generator list odwoЁaЯ
 Summary(pt_BR):	Ctags exuberantes! Ferramenta de referЙncia cruzada para C
+Summary(ru):	Утилита для индексации и построения ссылок для языка C
 Summary(tr):	C dili iГin Гapraz-baЧvuru (cross-reference) aracЩ
+Summary(uk):	Утил╕та для ╕ндексац╕╖ та побудови посилань для мови C
 Name:		ctags
-Version:	5.2.1
+Version:	5.2.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -81,12 +83,46 @@ resolver decisУes complicadas, e um algoritmo de resgate quando este
 falha. TambИm pode ser usado para mostrar uma lista de objetos
 selecionados que estejam nos arquivos fonte.
 
+%description -l ru
+Ctags генерирует индексный (или тэг-) файл объектов языка C, которые
+находятся в файлах исходных текстов и хедерах на языке C. Такой индекс
+облегчает текстовым редакторам и другим утилитам поиск индексированных
+объектов. Ctags также может генерировать файл перекрестных ссылок,
+который содержит информацию о различных объектах, содержащихся в
+наборе файлов на языке C в пригодной для чтения форме. Exuberant Ctags
+представляет собой усовершенствование стандартного ctags, т.к. он
+способен находить все типы тэгов языка C, включая макроопределения,
+перечисляемые значения (значения внутри enum{...}), определения
+функций и методов, тэги enum/struct/union, прототипы внешних функций,
+имена typedef и декларации переменных. Exuberant Ctags значительно
+труднее обмануть кодом, содержащим условные конструкции препроцессора
+#if, чем оригинальный ctags. Exuberant Ctags поддерживает вывод файла
+TAGS в стиле Emacs и может быть использован для вывода списка
+выбранных объектов, найденных в исходных файлах.
+
 %description -l tr
 Olabilecek her tЭrlЭ etiket ГeЧitleri - makro tanЩmlamalarЩ, sayЩlЩ
 (enumerated) deПerler, fonksiyon ve yЖntem (method) tanЩmlamalarЩ, tip
 ve deПiЧken tanЩmlarЩ - iГin etiketler Эretir. Kaynak kodlarЩnda
 bulunan, seГilmiЧ nesnelerin listesinin ГЩktЩsЩnЩ yazЩcЩdan almak iГin
 de kullanЩlabilir.
+
+%description -l uk
+Ctags генеру╓ ╕ндексний (або тег-) файл об'╓кт╕в мови C, як╕
+знаходяться у файлах вих╕дних текст╕в та хедерах на мов╕ C. Такий
+╕ндекс полегшу╓ текстовим редакторам та ╕ншим утил╕там пошук
+╕ндексованих об'╓кт╕в. Ctags також може генерувати файл перехресних
+посилань, який м╕стить ╕нформац╕ю про р╕зн╕ об'╓кти, як╕ м╕стяться у
+набор╕ файл╕в на мов╕ C у придатн╕й для читання форм╕. Exuberant Ctags
+явля╓ собою вдосконалення стандартного ctags, так як в╕н у стан╕
+знаходити вс╕ типи тег╕в мови C, включаючи макровизначення, значення
+всередин╕ enum{...}, визначення функц╕й та метод╕в, теги
+enum/struct/union, прототипи зовн╕шн╕х функц╕й, ╕мена typedef та
+декларац╕╖ зм╕нних. Exuberant Ctags значно тяжче обманути кодом, що
+м╕стить умовн╕ конструкц╕ю препроцесора #if, н╕ж ориг╕нальний ctags.
+Exuberant Ctags п╕дтриму╓ вив╕д файлу TAGS у стил╕ Emacs ╕ може бути
+використаний для виводу списку вибраних об'╓кт╕в, як╕ знаходяться у
+вих╕дних файлах.
 
 %prep
 %setup -q
@@ -110,13 +146,11 @@ rm -rf $RPM_BUILD_ROOT
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
-gzip -9nf FAQ NEWS QUOTES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc FAQ NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
