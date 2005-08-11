@@ -13,7 +13,7 @@ Version:	5.5.4
 Release:	2
 License:	GPL
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
 # Source0-md5:	a84124caadd4103270e0b84596ecfe83
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf
@@ -132,8 +132,8 @@ Exuberant Ctags п╕дтриму╓ вив╕д файлу TAGS у стил╕ Emacs ╕ може бути
 
 %build
 %{__autoconf}
-cp -f %{_datadir}/automake/install-sh .
-cp -f %{_datadir}/automake/config.sub .
+cp -f /usr/share/automake/install-sh .
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
