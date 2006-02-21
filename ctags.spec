@@ -10,7 +10,7 @@ Summary(tr):	C dili iГin Гapraz-baЧvuru (cross-reference) aracЩ
 Summary(uk):	Утил╕та для ╕ндексац╕╖ та побудови посилань для мови C
 Name:		ctags
 Version:	5.5.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
@@ -131,6 +131,8 @@ Exuberant Ctags п╕дтриму╓ вив╕д файлу TAGS у стил╕ Emacs ╕ може бути
 %setup -q
 
 %build
+TMPDIR=/tmp
+export TMPDIR
 %{__autoconf}
 cp -f /usr/share/automake/install-sh .
 cp -f /usr/share/automake/config.sub .
