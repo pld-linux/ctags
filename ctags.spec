@@ -9,12 +9,12 @@ Summary(ru):	Утилита для индексации и построения ссылок для языка C
 Summary(tr):	C dili iГin Гapraz-baЧvuru (cross-reference) aracЩ
 Summary(uk):	Утил╕та для ╕ндексац╕╖ та побудови посилань для мови C
 Name:		ctags
-Version:	5.5.4
-Release:	3
+Version:	5.6
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
-# Source0-md5:	a84124caadd4103270e0b84596ecfe83
+# Source0-md5:	9026a6c6950751bc4fd1be37e8a2070f
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
