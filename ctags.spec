@@ -136,7 +136,7 @@ export TMPDIR
 %{__autoconf}
 cp -f /usr/share/automake/install-sh .
 cp -f /usr/share/automake/config.sub .
-%configure
+%configure --enable-etags
 %{__make}
 
 %install
