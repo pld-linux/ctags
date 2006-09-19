@@ -1,0 +1,4 @@
+- updated to 3.3.1
+- added using %configure macro
+- removed stripping binaries in %install
+- other minor changes
