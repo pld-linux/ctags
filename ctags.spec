@@ -36,10 +36,10 @@ supports output of emacs style TAGS files and can be used to print out
 a list of selected objects found in source files.
 
 %description -l de
-#if-PrДprozessor-Bedingungen enthДlt, dank eines konditionalen
-Ein verbessertes ctags, das tags fЭr alle mЖglichen tag-Typen
-generiert: Makrodefinitionen, aufgezДhlte Werte (Werte in enum{...}),
-Funktions- und Methodendefinitionen, enum/struct/union-tags, externe
+'#if'-PrДprozessor-Bedingungen enthДlt, dank eines konditionalen Ein
+verbessertes ctags, das tags fЭr alle mЖglichen tag-Typen generiert:
+Makrodefinitionen, aufgezДhlte Werte (Werte in enum{...}), Funktions-
+und Methodendefinitionen, enum/struct/union-tags, externe
 Funktionsprototypen (wahlweise), typedefs und variable Deklarationen.
 Es lДъt sich weit weniger gut durch Code tДuschen, der
 Pfadauswahlalgorithmus, der komplizierte Entscheidungen trifft, und
@@ -99,8 +99,8 @@ Ctags генерирует индексный (или тэг-) файл объектов языка C, которые
 функций и методов, тэги enum/struct/union, прототипы внешних функций,
 имена typedef и декларации переменных. Exuberant Ctags значительно
 труднее обмануть кодом, содержащим условные конструкции препроцессора
-#if, чем оригинальный ctags. Exuberant Ctags поддерживает вывод файла
-TAGS в стиле Emacs и может быть использован для вывода списка
+'#if', чем оригинальный ctags. Exuberant Ctags поддерживает вывод
+файла TAGS в стиле Emacs и может быть использован для вывода списка
 выбранных объектов, найденных в исходных файлах.
 
 %description -l tr
@@ -136,7 +136,8 @@ export TMPDIR
 %{__autoconf}
 cp -f /usr/share/automake/install-sh .
 cp -f /usr/share/automake/config.sub .
-%configure --enable-etags
+%configure \
+	--enable-etags
 %{__make}
 
 %install
