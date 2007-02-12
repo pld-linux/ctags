@@ -1,13 +1,13 @@
 Summary:	Exuberant ctags -- C cross-reference tool
-Summary(de):	Exuberant ctags - C-Cross-Reference-Tool
-Summary(es):	ctags - generador de listas de referencia
-Summary(fr):	ctags exubИrant
-Summary(ko):	©╘╥╞ ╬П╬Н╥н ╣х ╪р╫╨ дз╣Е©║ ╩Жюню╩ ╦╦╣И╬Наж╢б ╣╣╠╦
-Summary(pl):	ctags - generator list odwoЁaЯ
-Summary(pt_BR):	Ctags exuberantes! Ferramenta de referЙncia cruzada para C
-Summary(ru):	Утилита для индексации и построения ссылок для языка C
-Summary(tr):	C dili iГin Гapraz-baЧvuru (cross-reference) aracЩ
-Summary(uk):	Утил╕та для ╕ндексац╕╖ та побудови посилань для мови C
+Summary(de.UTF-8):   Exuberant ctags - C-Cross-Reference-Tool
+Summary(es.UTF-8):   ctags - generador de listas de referencia
+Summary(fr.UTF-8):   ctags exubц╘rant
+Summary(ko.UTF-8):   Л≈╛К÷╛ Л√╦Л√╢К║° К░° Л├▄Л┼╓ Л╫■К⌠°Л≈░ Л┐┴Л²╦Л²└ К╖▄К⌠╓Л√╢Лё╪К┼■ К▐└Й╣╛
+Summary(pl.UTF-8):   ctags - generator list odwoе┌aе└
+Summary(pt_BR.UTF-8):   Ctags exuberantes! Ferramenta de referц╙ncia cruzada para C
+Summary(ru.UTF-8):   пёя┌п╦п╩п╦я┌п╟ п╢п╩я▐ п╦п╫п╢п╣п╨я│п╟я├п╦п╦ п╦ п©п╬я│я┌я─п╬п╣п╫п╦я▐ я│я│я▀п╩п╬п╨ п╢п╩я▐ я▐п╥я▀п╨п╟ C
+Summary(tr.UTF-8):   C dili iц╖in ц╖apraz-baе÷vuru (cross-reference) aracд╠
+Summary(uk.UTF-8):   пёя┌п╦п╩я√я┌п╟ п╢п╩я▐ я√п╫п╢п╣п╨я│п╟я├я√я≈ я┌п╟ п©п╬п╠я┐п╢п╬п╡п╦ п©п╬я│п╦п╩п╟п╫я▄ п╢п╩я▐ п╪п╬п╡п╦ C
 Name:		ctags
 Version:	5.6
 Release:	1
@@ -35,97 +35,97 @@ preprocessor conditional constructs than ctags. Exuberant ctags
 supports output of emacs style TAGS files and can be used to print out
 a list of selected objects found in source files.
 
-%description -l de
-'#if'-PrДprozessor-Bedingungen enthДlt, dank eines konditionalen Ein
-verbessertes ctags, das tags fЭr alle mЖglichen tag-Typen generiert:
-Makrodefinitionen, aufgezДhlte Werte (Werte in enum{...}), Funktions-
+%description -l de.UTF-8
+'#if'-Prц╓prozessor-Bedingungen enthц╓lt, dank eines konditionalen Ein
+verbessertes ctags, das tags fц╪r alle mц╤glichen tag-Typen generiert:
+Makrodefinitionen, aufgezц╓hlte Werte (Werte in enum{...}), Funktions-
 und Methodendefinitionen, enum/struct/union-tags, externe
 Funktionsprototypen (wahlweise), typedefs und variable Deklarationen.
-Es lДъt sich weit weniger gut durch Code tДuschen, der
+Es lц╓ц÷t sich weit weniger gut durch Code tц╓uschen, der
 Pfadauswahlalgorithmus, der komplizierte Entscheidungen trifft, und
 eines Ausweiche-Algorithmus, der ins Spiel kommt, wenn der erste dem
 Problem nicht gewachsen ist. Kann auch benutzt werden, um eine Liste
-ausgewДhlter Objekte, die in Quelldateien gefunden wurden,
+ausgewц╓hlter Objekte, die in Quelldateien gefunden wurden,
 auszudrucken.
 
-%description -l es
+%description -l es.UTF-8
 Un ctags mejor que crea tags para todos los tipos posibles de tag:
-definiciones de macro, valores enumerados, definiciones de funciСn y
-mИtodo, tags enum/struct/union, prototipos de funciСn externa
-(opcional), typedefs y declaraciones variables. Es mАs difМcil de ser
-engaЯado en cСdigos que contenga la directiva condicional #if para el
+definiciones de macro, valores enumerados, definiciones de funciцЁn y
+mц╘todo, tags enum/struct/union, prototipos de funciцЁn externa
+(opcional), typedefs y declaraciones variables. Es mц║s difц╜cil de ser
+engaц╠ado en cцЁdigos que contenga la directiva condicional #if para el
 preprocesador, pues utiliza un algoritmo condicional de camino para
 solucionar decisiones complicadas, y un algoritmo de rescate cuando
-este falla. TambiИn puede ser usado para enseЯar una lista de objetos
-seleccionados que estИ en los archivos fuente.
+este falla. Tambiц╘n puede ser usado para enseц╠ar una lista de objetos
+seleccionados que estц╘ en los archivos fuente.
 
-%description -l fr
-un ctags amИliorИ gИnИrant des tags pour tous les types de tags
-possibles : dИfinitions de macros, valeurs ИnumИrИes (valeurs dans
-enum{...}), dИfinitions de fonctions et de mИthodes, enum/struct/union
+%description -l fr.UTF-8
+un ctags amц╘liorц╘ gц╘nц╘rant des tags pour tous les types de tags
+possibles : dц╘finitions de macros, valeurs ц╘numц╘rц╘es (valeurs dans
+enum{...}), dц╘finitions de fonctions et de mц╘thodes, enum/struct/union
 tags, prototypes de fonctions externes (optionnel), typedefs, et
-dИclarations de variables. Peut aussi Йtre utilisИ pour afficher une
-liste des objets choisis trouvИs dans les fichiers source.
+dц╘clarations de variables. Peut aussi ц╙tre utilisц╘ pour afficher une
+liste des objets choisis trouvц╘s dans les fichiers source.
 
-%description -l pl
-Generator tabeli odwoЁaЯ dla: makr, zmiennych, funkcji i procedur,
-definicji typСw, metod (C++) itp. U©ywany do generacji listy
-wyspecyfikowanych obiektСw znalezionych w plikach ╪rСdЁowych. Tablica
-owych odwoЁaЯ mo©e byФ wykorzystywana przez wiЙkszo╤Ф standardowych
-edytorСw tekstu (vim, joe, emacs), do przemieszczania siЙ w ╪rСdЁach
-miЙdzy deklaracj╠ i u©yciem danego symbolu.
+%description -l pl.UTF-8
+Generator tabeli odwoе┌aе└ dla: makr, zmiennych, funkcji i procedur,
+definicji typцЁw, metod (C++) itp. Uе╪ywany do generacji listy
+wyspecyfikowanych obiektцЁw znalezionych w plikach е╨rцЁdе┌owych. Tablica
+owych odwoе┌aе└ moе╪e byд┤ wykorzystywana przez wiд≥kszoе⌡д┤ standardowych
+edytorцЁw tekstu (vim, joe, emacs), do przemieszczania siд≥ w е╨rцЁdе┌ach
+miд≥dzy deklaracjд┘ i uе╪yciem danego symbolu.
 
-%description -l pt_BR
-Um ctags melhor que gera tags para todos os tipos possМveis de tag:
-definiГУes de macro, valores enumerados, definiГУes de funГЦo e
-mИtodo, tags enum/struct/union, protСtipos de funГЦo externa
-(opcional), typedefs e declaraГУes variАveis. и mais difМcil de ser
-enganado em cСdigos que contenha a diretiva condicional #if para o
-prИ-processador, pois utiliza um algoritmo condicional de caminho para
-resolver decisУes complicadas, e um algoritmo de resgate quando este
-falha. TambИm pode ser usado para mostrar uma lista de objetos
+%description -l pt_BR.UTF-8
+Um ctags melhor que gera tags para todos os tipos possц╜veis de tag:
+definiц╖ц╣es de macro, valores enumerados, definiц╖ц╣es de funц╖цёo e
+mц╘todo, tags enum/struct/union, protцЁtipos de funц╖цёo externa
+(opcional), typedefs e declaraц╖ц╣es variц║veis. ц┴ mais difц╜cil de ser
+enganado em cцЁdigos que contenha a diretiva condicional #if para o
+prц╘-processador, pois utiliza um algoritmo condicional de caminho para
+resolver decisц╣es complicadas, e um algoritmo de resgate quando este
+falha. Tambц╘m pode ser usado para mostrar uma lista de objetos
 selecionados que estejam nos arquivos fonte.
 
-%description -l ru
-Ctags генерирует индексный (или тэг-) файл объектов языка C, которые
-находятся в файлах исходных текстов и хедерах на языке C. Такой индекс
-облегчает текстовым редакторам и другим утилитам поиск индексированных
-объектов. Ctags также может генерировать файл перекрестных ссылок,
-который содержит информацию о различных объектах, содержащихся в
-наборе файлов на языке C в пригодной для чтения форме. Exuberant Ctags
-представляет собой усовершенствование стандартного ctags, т.к. он
-способен находить все типы тэгов языка C, включая макроопределения,
-перечисляемые значения (значения внутри enum{...}), определения
-функций и методов, тэги enum/struct/union, прототипы внешних функций,
-имена typedef и декларации переменных. Exuberant Ctags значительно
-труднее обмануть кодом, содержащим условные конструкции препроцессора
-'#if', чем оригинальный ctags. Exuberant Ctags поддерживает вывод
-файла TAGS в стиле Emacs и может быть использован для вывода списка
-выбранных объектов, найденных в исходных файлах.
+%description -l ru.UTF-8
+Ctags пЁп╣п╫п╣я─п╦я─я┐п╣я┌ п╦п╫п╢п╣п╨я│п╫я▀п╧ (п╦п╩п╦ я┌я█пЁ-) я└п╟п╧п╩ п╬п╠я┼п╣п╨я┌п╬п╡ я▐п╥я▀п╨п╟ C, п╨п╬я┌п╬я─я▀п╣
+п╫п╟я┘п╬п╢я▐я┌я│я▐ п╡ я└п╟п╧п╩п╟я┘ п╦я│я┘п╬п╢п╫я▀я┘ я┌п╣п╨я│я┌п╬п╡ п╦ я┘п╣п╢п╣я─п╟я┘ п╫п╟ я▐п╥я▀п╨п╣ C. п╒п╟п╨п╬п╧ п╦п╫п╢п╣п╨я│
+п╬п╠п╩п╣пЁя┤п╟п╣я┌ я┌п╣п╨я│я┌п╬п╡я▀п╪ я─п╣п╢п╟п╨я┌п╬я─п╟п╪ п╦ п╢я─я┐пЁп╦п╪ я┐я┌п╦п╩п╦я┌п╟п╪ п©п╬п╦я│п╨ п╦п╫п╢п╣п╨я│п╦я─п╬п╡п╟п╫п╫я▀я┘
+п╬п╠я┼п╣п╨я┌п╬п╡. Ctags я┌п╟п╨п╤п╣ п╪п╬п╤п╣я┌ пЁп╣п╫п╣я─п╦я─п╬п╡п╟я┌я▄ я└п╟п╧п╩ п©п╣я─п╣п╨я─п╣я│я┌п╫я▀я┘ я│я│я▀п╩п╬п╨,
+п╨п╬я┌п╬я─я▀п╧ я│п╬п╢п╣я─п╤п╦я┌ п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╬ я─п╟п╥п╩п╦я┤п╫я▀я┘ п╬п╠я┼п╣п╨я┌п╟я┘, я│п╬п╢п╣я─п╤п╟я┴п╦я┘я│я▐ п╡
+п╫п╟п╠п╬я─п╣ я└п╟п╧п╩п╬п╡ п╫п╟ я▐п╥я▀п╨п╣ C п╡ п©я─п╦пЁп╬п╢п╫п╬п╧ п╢п╩я▐ я┤я┌п╣п╫п╦я▐ я└п╬я─п╪п╣. Exuberant Ctags
+п©я─п╣п╢я│я┌п╟п╡п╩я▐п╣я┌ я│п╬п╠п╬п╧ я┐я│п╬п╡п╣я─я┬п╣п╫я│я┌п╡п╬п╡п╟п╫п╦п╣ я│я┌п╟п╫п╢п╟я─я┌п╫п╬пЁп╬ ctags, я┌.п╨. п╬п╫
+я│п©п╬я│п╬п╠п╣п╫ п╫п╟я┘п╬п╢п╦я┌я▄ п╡я│п╣ я┌п╦п©я▀ я┌я█пЁп╬п╡ я▐п╥я▀п╨п╟ C, п╡п╨п╩я▌я┤п╟я▐ п╪п╟п╨я─п╬п╬п©я─п╣п╢п╣п╩п╣п╫п╦я▐,
+п©п╣я─п╣я┤п╦я│п╩я▐п╣п╪я▀п╣ п╥п╫п╟я┤п╣п╫п╦я▐ (п╥п╫п╟я┤п╣п╫п╦я▐ п╡п╫я┐я┌я─п╦ enum{...}), п╬п©я─п╣п╢п╣п╩п╣п╫п╦я▐
+я└я┐п╫п╨я├п╦п╧ п╦ п╪п╣я┌п╬п╢п╬п╡, я┌я█пЁп╦ enum/struct/union, п©я─п╬я┌п╬я┌п╦п©я▀ п╡п╫п╣я┬п╫п╦я┘ я└я┐п╫п╨я├п╦п╧,
+п╦п╪п╣п╫п╟ typedef п╦ п╢п╣п╨п╩п╟я─п╟я├п╦п╦ п©п╣я─п╣п╪п╣п╫п╫я▀я┘. Exuberant Ctags п╥п╫п╟я┤п╦я┌п╣п╩я▄п╫п╬
+я┌я─я┐п╢п╫п╣п╣ п╬п╠п╪п╟п╫я┐я┌я▄ п╨п╬п╢п╬п╪, я│п╬п╢п╣я─п╤п╟я┴п╦п╪ я┐я│п╩п╬п╡п╫я▀п╣ п╨п╬п╫я│я┌я─я┐п╨я├п╦п╦ п©я─п╣п©я─п╬я├п╣я│я│п╬я─п╟
+'#if', я┤п╣п╪ п╬я─п╦пЁп╦п╫п╟п╩я▄п╫я▀п╧ ctags. Exuberant Ctags п©п╬п╢п╢п╣я─п╤п╦п╡п╟п╣я┌ п╡я▀п╡п╬п╢
+я└п╟п╧п╩п╟ TAGS п╡ я│я┌п╦п╩п╣ Emacs п╦ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫ п╢п╩я▐ п╡я▀п╡п╬п╢п╟ я│п©п╦я│п╨п╟
+п╡я▀п╠я─п╟п╫п╫я▀я┘ п╬п╠я┼п╣п╨я┌п╬п╡, п╫п╟п╧п╢п╣п╫п╫я▀я┘ п╡ п╦я│я┘п╬п╢п╫я▀я┘ я└п╟п╧п╩п╟я┘.
 
-%description -l tr
-Olabilecek her tЭrlЭ etiket ГeЧitleri - makro tanЩmlamalarЩ, sayЩlЩ
-(enumerated) deПerler, fonksiyon ve yЖntem (method) tanЩmlamalarЩ, tip
-ve deПiЧken tanЩmlarЩ - iГin etiketler Эretir. Kaynak kodlarЩnda
-bulunan, seГilmiЧ nesnelerin listesinin ГЩktЩsЩnЩ yazЩcЩdan almak iГin
-de kullanЩlabilir.
+%description -l tr.UTF-8
+Olabilecek her tц╪rlц╪ etiket ц╖eе÷itleri - makro tanд╠mlamalarд╠, sayд╠lд╠
+(enumerated) deд÷erler, fonksiyon ve yц╤ntem (method) tanд╠mlamalarд╠, tip
+ve deд÷iе÷ken tanд╠mlarд╠ - iц╖in etiketler ц╪retir. Kaynak kodlarд╠nda
+bulunan, seц╖ilmiе÷ nesnelerin listesinin ц╖д╠ktд╠sд╠nд╠ yazд╠cд╠dan almak iц╖in
+de kullanд╠labilir.
 
-%description -l uk
-Ctags генеру╓ ╕ндексний (або тег-) файл об'╓кт╕в мови C, як╕
-знаходяться у файлах вих╕дних текст╕в та хедерах на мов╕ C. Такий
-╕ндекс полегшу╓ текстовим редакторам та ╕ншим утил╕там пошук
-╕ндексованих об'╓кт╕в. Ctags також може генерувати файл перехресних
-посилань, який м╕стить ╕нформац╕ю про р╕зн╕ об'╓кти, як╕ м╕стяться у
-набор╕ файл╕в на мов╕ C у придатн╕й для читання форм╕. Exuberant Ctags
-явля╓ собою вдосконалення стандартного ctags, так як в╕н у стан╕
-знаходити вс╕ типи тег╕в мови C, включаючи макровизначення, значення
-всередин╕ enum{...}, визначення функц╕й та метод╕в, теги
-enum/struct/union, прототипи зовн╕шн╕х функц╕й, ╕мена typedef та
-декларац╕╖ зм╕нних. Exuberant Ctags значно тяжче обманути кодом, що
-м╕стить умовн╕ конструкц╕ю препроцесора #if, н╕ж ориг╕нальний ctags.
-Exuberant Ctags п╕дтриму╓ вив╕д файлу TAGS у стил╕ Emacs ╕ може бути
-використаний для виводу списку вибраних об'╓кт╕в, як╕ знаходяться у
-вих╕дних файлах.
+%description -l uk.UTF-8
+Ctags пЁп╣п╫п╣я─я┐я■ я√п╫п╢п╣п╨я│п╫п╦п╧ (п╟п╠п╬ я┌п╣пЁ-) я└п╟п╧п╩ п╬п╠'я■п╨я┌я√п╡ п╪п╬п╡п╦ C, я▐п╨я√
+п╥п╫п╟я┘п╬п╢я▐я┌я▄я│я▐ я┐ я└п╟п╧п╩п╟я┘ п╡п╦я┘я√п╢п╫п╦я┘ я┌п╣п╨я│я┌я√п╡ я┌п╟ я┘п╣п╢п╣я─п╟я┘ п╫п╟ п╪п╬п╡я√ C. п╒п╟п╨п╦п╧
+я√п╫п╢п╣п╨я│ п©п╬п╩п╣пЁя┬я┐я■ я┌п╣п╨я│я┌п╬п╡п╦п╪ я─п╣п╢п╟п╨я┌п╬я─п╟п╪ я┌п╟ я√п╫я┬п╦п╪ я┐я┌п╦п╩я√я┌п╟п╪ п©п╬я┬я┐п╨
+я√п╫п╢п╣п╨я│п╬п╡п╟п╫п╦я┘ п╬п╠'я■п╨я┌я√п╡. Ctags я┌п╟п╨п╬п╤ п╪п╬п╤п╣ пЁп╣п╫п╣я─я┐п╡п╟я┌п╦ я└п╟п╧п╩ п©п╣я─п╣я┘я─п╣я│п╫п╦я┘
+п©п╬я│п╦п╩п╟п╫я▄, я▐п╨п╦п╧ п╪я√я│я┌п╦я┌я▄ я√п╫я└п╬я─п╪п╟я├я√я▌ п©я─п╬ я─я√п╥п╫я√ п╬п╠'я■п╨я┌п╦, я▐п╨я√ п╪я√я│я┌я▐я┌я▄я│я▐ я┐
+п╫п╟п╠п╬я─я√ я└п╟п╧п╩я√п╡ п╫п╟ п╪п╬п╡я√ C я┐ п©я─п╦п╢п╟я┌п╫я√п╧ п╢п╩я▐ я┤п╦я┌п╟п╫п╫я▐ я└п╬я─п╪я√. Exuberant Ctags
+я▐п╡п╩я▐я■ я│п╬п╠п╬я▌ п╡п╢п╬я│п╨п╬п╫п╟п╩п╣п╫п╫я▐ я│я┌п╟п╫п╢п╟я─я┌п╫п╬пЁп╬ ctags, я┌п╟п╨ я▐п╨ п╡я√п╫ я┐ я│я┌п╟п╫я√
+п╥п╫п╟я┘п╬п╢п╦я┌п╦ п╡я│я√ я┌п╦п©п╦ я┌п╣пЁя√п╡ п╪п╬п╡п╦ C, п╡п╨п╩я▌я┤п╟я▌я┤п╦ п╪п╟п╨я─п╬п╡п╦п╥п╫п╟я┤п╣п╫п╫я▐, п╥п╫п╟я┤п╣п╫п╫я▐
+п╡я│п╣я─п╣п╢п╦п╫я√ enum{...}, п╡п╦п╥п╫п╟я┤п╣п╫п╫я▐ я└я┐п╫п╨я├я√п╧ я┌п╟ п╪п╣я┌п╬п╢я√п╡, я┌п╣пЁп╦
+enum/struct/union, п©я─п╬я┌п╬я┌п╦п©п╦ п╥п╬п╡п╫я√я┬п╫я√я┘ я└я┐п╫п╨я├я√п╧, я√п╪п╣п╫п╟ typedef я┌п╟
+п╢п╣п╨п╩п╟я─п╟я├я√я≈ п╥п╪я√п╫п╫п╦я┘. Exuberant Ctags п╥п╫п╟я┤п╫п╬ я┌я▐п╤я┤п╣ п╬п╠п╪п╟п╫я┐я┌п╦ п╨п╬п╢п╬п╪, я┴п╬
+п╪я√я│я┌п╦я┌я▄ я┐п╪п╬п╡п╫я√ п╨п╬п╫я│я┌я─я┐п╨я├я√я▌ п©я─п╣п©я─п╬я├п╣я│п╬я─п╟ #if, п╫я√п╤ п╬я─п╦пЁя√п╫п╟п╩я▄п╫п╦п╧ ctags.
+Exuberant Ctags п©я√п╢я┌я─п╦п╪я┐я■ п╡п╦п╡я√п╢ я└п╟п╧п╩я┐ TAGS я┐ я│я┌п╦п╩я√ Emacs я√ п╪п╬п╤п╣ п╠я┐я┌п╦
+п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╦п╧ п╢п╩я▐ п╡п╦п╡п╬п╢я┐ я│п©п╦я│п╨я┐ п╡п╦п╠я─п╟п╫п╦я┘ п╬п╠'я■п╨я┌я√п╡, я▐п╨я√ п╥п╫п╟я┘п╬п╢я▐я┌я▄я│я▐ я┐
+п╡п╦я┘я√п╢п╫п╦я┘ я└п╟п╧п╩п╟я┘.
 
 %prep
 %setup -q
