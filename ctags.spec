@@ -1,10 +1,10 @@
 Summary:	Exuberant ctags -- C cross-reference tool
-Summary(de):	Exuberant ctags - C-Cross-Reference-Tool
-Summary(es):	Ctags ¡exuberantes! Herramienta de referencia cruzada para C
-Summary(fr):	ctags exubérant
-Summary(pl):	ctags - generator list odwo³añ
-Summary(pt_BR):	Ctags exuberantes! Ferramenta de referência cruzada para C
-Summary(tr):	C dili için çapraz-başvuru (cross-reference) aracı
+Summary(de.UTF-8):   Exuberant ctags - C-Cross-Reference-Tool
+Summary(es.UTF-8):   Ctags Â¡exuberantes! Herramienta de referencia cruzada para C
+Summary(fr.UTF-8):   ctags exubÃ©rant
+Summary(pl.UTF-8):   ctags - generator list odwoÅ‚aÅ„
+Summary(pt_BR.UTF-8):   Ctags exuberantes! Ferramenta de referÃªncia cruzada para C
+Summary(tr.UTF-8):   C dili iÃ§in Ã§apraz-baÅŸvuru (cross-reference) aracÄ±
 Name:		ctags
 Version:	5.2.3
 Release:	1
@@ -30,63 +30,63 @@ preprocessor conditional constructs than ctags. Exuberant ctags
 supports output of emacs style TAGS files and can be used to print out
 a list of selected objects found in source files.
 
-%description -l de
-#if-Präprozessor-Bedingungen enthält, dank eines konditionalen
-Ein verbessertes ctags, das tags für alle möglichen tag-Typen
-generiert: Makrodefinitionen, aufgezählte Werte (Werte in enum{...}),
+%description -l de.UTF-8
+#if-PrÃ¤prozessor-Bedingungen enthÃ¤lt, dank eines konditionalen
+Ein verbessertes ctags, das tags fÃ¼r alle mÃ¶glichen tag-Typen
+generiert: Makrodefinitionen, aufgezÃ¤hlte Werte (Werte in enum{...}),
 Funktions- und Methodendefinitionen, enum/struct/union-tags, externe
 Funktionsprototypen (wahlweise), typedefs und variable Deklarationen.
-Es läßt sich weit weniger gut durch Code täuschen, der
+Es lÃ¤ÃŸt sich weit weniger gut durch Code tÃ¤uschen, der
 Pfadauswahlalgorithmus, der komplizierte Entscheidungen trifft, und
 eines Ausweiche-Algorithmus, der ins Spiel kommt, wenn der erste dem
 Problem nicht gewachsen ist. Kann auch benutzt werden, um eine Liste
-ausgewählter Objekte, die in Quelldateien gefunden wurden,
+ausgewÃ¤hlter Objekte, die in Quelldateien gefunden wurden,
 auszudrucken.
 
-%description -l es
+%description -l es.UTF-8
 Un ctags mejor que crea tags para todos los tipos posibles de tag:
-definiciones de macro, valores enumerados, definiciones de función y
-método, tags enum/struct/union, prototipos de función externa
-(opcional), typedefs y declaraciones variables. Es más difícil de ser
-engañado en códigos que contenga la directiva condicional #if para el
+definiciones de macro, valores enumerados, definiciones de funciÃ³n y
+mÃ©todo, tags enum/struct/union, prototipos de funciÃ³n externa
+(opcional), typedefs y declaraciones variables. Es mÃ¡s difÃ­cil de ser
+engaÃ±ado en cÃ³digos que contenga la directiva condicional #if para el
 preprocesador, pues utiliza un algoritmo condicional de camino para
 solucionar decisiones complicadas, y un algoritmo de rescate cuando
-este falla. También puede ser usado para enseñar una lista de objetos
-seleccionados que esté en los archivos fuente.
+este falla. TambiÃ©n puede ser usado para enseÃ±ar una lista de objetos
+seleccionados que estÃ© en los archivos fuente.
 
-%description -l fr
-un ctags amélioré générant des tags pour tous les types de tags
-possibles : définitions de macros, valeurs énumérées (valeurs dans
-enum{...}), définitions de fonctions et de méthodes, enum/struct/union
+%description -l fr.UTF-8
+un ctags amÃ©liorÃ© gÃ©nÃ©rant des tags pour tous les types de tags
+possibles : dÃ©finitions de macros, valeurs Ã©numÃ©rÃ©es (valeurs dans
+enum{...}), dÃ©finitions de fonctions et de mÃ©thodes, enum/struct/union
 tags, prototypes de fonctions externes (optionnel), typedefs, et
-déclarations de variables. Peut aussi être utilisé pour afficher une
-liste des objets choisis trouvés dans les fichiers source.
+dÃ©clarations de variables. Peut aussi Ãªtre utilisÃ© pour afficher une
+liste des objets choisis trouvÃ©s dans les fichiers source.
 
-%description -l pl
-Generator tabeli odwo³añ dla: makr, zmiennych, funkcji i procedur,
-definicji typów, metod (C++) itp. U¿ywany do generacji listy
-wyspecyfikowanych obiektów znalezionych w plikach ¼ród³owych. Tablica
-owych odwo³añ mo¿e byæ wykorzystywana przez wiekszosæ standardowych
-edytorów tekstu (vim, joe, emacs), do przemieszczania siê w ¼ród³ach
-miêdzy deklaracj± i u¿yciem danego symbolu.
+%description -l pl.UTF-8
+Generator tabeli odwoÅ‚aÅ„ dla: makr, zmiennych, funkcji i procedur,
+definicji typÃ³w, metod (C++) itp. UÅ¼ywany do generacji listy
+wyspecyfikowanych obiektÃ³w znalezionych w plikach ÅºrÃ³dÅ‚owych. Tablica
+owych odwoÅ‚aÅ„ moÅ¼e byÄ‡ wykorzystywana przez wiekszosÄ‡ standardowych
+edytorÃ³w tekstu (vim, joe, emacs), do przemieszczania siÄ™ w ÅºrÃ³dÅ‚ach
+miÄ™dzy deklaracjÄ… i uÅ¼yciem danego symbolu.
 
-%description -l pt_BR
-Um ctags melhor que gera tags para todos os tipos possíveis de tag:
-definições de macro, valores enumerados, definições de função e
-método, tags enum/struct/union, protótipos de função externa
-(opcional), typedefs e declarações variáveis. É mais difícil de ser
-enganado em códigos que contenha a diretiva condicional #if para o
-pré-processador, pois utiliza um algoritmo condicional de caminho para
-resolver decisões complicadas, e um algoritmo de resgate quando este
-falha. Também pode ser usado para mostrar uma lista de objetos
+%description -l pt_BR.UTF-8
+Um ctags melhor que gera tags para todos os tipos possÃ­veis de tag:
+definiÃ§Ãµes de macro, valores enumerados, definiÃ§Ãµes de funÃ§Ã£o e
+mÃ©todo, tags enum/struct/union, protÃ³tipos de funÃ§Ã£o externa
+(opcional), typedefs e declaraÃ§Ãµes variÃ¡veis. Ã‰ mais difÃ­cil de ser
+enganado em cÃ³digos que contenha a diretiva condicional #if para o
+prÃ©-processador, pois utiliza um algoritmo condicional de caminho para
+resolver decisÃµes complicadas, e um algoritmo de resgate quando este
+falha. TambÃ©m pode ser usado para mostrar uma lista de objetos
 selecionados que estejam nos arquivos fonte.
 
-%description -l tr
-Olabilecek her türlü etiket çeşitleri - makro tanımlamaları, sayılı
-(enumerated) değerler, fonksiyon ve yöntem (method) tanımlamaları, tip
-ve değişken tanımları - için etiketler üretir. Kaynak kodlarında
-bulunan, seçilmiş nesnelerin listesinin çıktısını yazıcıdan almak için
-de kullanılabilir.
+%description -l tr.UTF-8
+Olabilecek her tÃ¼rlÃ¼ etiket Ã§eÅŸitleri - makro tanÄ±mlamalarÄ±, sayÄ±lÄ±
+(enumerated) deÄŸerler, fonksiyon ve yÃ¶ntem (method) tanÄ±mlamalarÄ±, tip
+ve deÄŸiÅŸken tanÄ±mlarÄ± - iÃ§in etiketler Ã¼retir. Kaynak kodlarÄ±nda
+bulunan, seÃ§ilmiÅŸ nesnelerin listesinin Ã§Ä±ktÄ±sÄ±nÄ± yazÄ±cÄ±dan almak iÃ§in
+de kullanÄ±labilir.
 
 %prep
 %setup -q
