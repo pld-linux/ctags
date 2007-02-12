@@ -1,13 +1,13 @@
 Summary:	Exuberant ctags -- C cross-reference tool
-Summary(de.UTF-8):   Exuberant ctags - C-Cross-Reference-Tool
-Summary(es.UTF-8):   ctags - generador de listas de referencia
-Summary(fr.UTF-8):   ctags exubérant
-Summary(ko.UTF-8):   여러 언어로 된 소스 코드에 색인을 만들어주는 도구
-Summary(pl.UTF-8):   ctags - generator list odwołań
-Summary(pt_BR.UTF-8):   Ctags exuberantes! Ferramenta de referência cruzada para C
-Summary(ru.UTF-8):   Утилита для индексации и построения ссылок для языка C
-Summary(tr.UTF-8):   C dili için çapraz-başvuru (cross-reference) aracı
-Summary(uk.UTF-8):   Утиліта для індексації та побудови посилань для мови C
+Summary(de.UTF-8):	Exuberant ctags - C-Cross-Reference-Tool
+Summary(es.UTF-8):	ctags - generador de listas de referencia
+Summary(fr.UTF-8):	ctags exubérant
+Summary(ko.UTF-8):	여러 언어로 된 소스 코드에 색인을 만들어주는 도구
+Summary(pl.UTF-8):	ctags - generator list odwołań
+Summary(pt_BR.UTF-8):	Ctags exuberantes! Ferramenta de referência cruzada para C
+Summary(ru.UTF-8):	Утилита для индексации и построения ссылок для языка C
+Summary(tr.UTF-8):	C dili için çapraz-başvuru (cross-reference) aracı
+Summary(uk.UTF-8):	Утиліта для індексації та побудови посилань для мови C
 Name:		ctags
 Version:	5.6
 Release:	1
