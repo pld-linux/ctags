@@ -9,14 +9,14 @@ Summary(ru.UTF-8):	Утилита для индексации и построе�
 Summary(tr.UTF-8):	C dili için çapraz-başvuru (cross-reference) aracı
 Summary(uk.UTF-8):	Утиліта для індексації та побудови посилань для мови C
 Name:		ctags
-Version:	5.6
+Version:	5.7
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
-# Source0-md5:	9026a6c6950751bc4fd1be37e8a2070f
+# Source0-md5:	643cab63b39c8a24377dc4c781547d40
 URL:		http://ctags.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 1.12
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -131,13 +131,12 @@ Exuberant Ctags підтримує вивід файлу TAGS у стилі Emac
 %setup -q
 
 %build
-TMPDIR=/tmp
-export TMPDIR
 %{__autoconf}
 cp -f /usr/share/automake/install-sh .
 cp -f /usr/share/automake/config.sub .
 %configure \
-	--enable-etags
+	--enable-etags \
+	--enable-tmpdir=/tmp
 %{__make}
 
 %install
