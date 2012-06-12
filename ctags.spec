@@ -10,7 +10,7 @@ Summary(tr.UTF-8):	C dili için çapraz-başvuru (cross-reference) aracı
 Summary(uk.UTF-8):	Утиліта для індексації та побудови посилань для мови C
 Name:		ctags
 Version:	5.8
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
@@ -137,17 +137,18 @@ cp -f /usr/share/automake/config.sub .
 %configure \
 	--enable-etags \
 	--enable-tmpdir=/tmp
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install \
+%{__make} -j1 install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
-echo ".so ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
+echo ".so man1/ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -155,5 +156,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc EXTENDING.html FAQ NEWS README
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/ctags
+%attr(755,root,root) %{_bindir}/etags
+%{_mandir}/man1/ctags.1*
+%{_mandir}/man1/etags.1*
