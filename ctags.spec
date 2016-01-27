@@ -10,12 +10,18 @@ Summary(tr.UTF-8):	C dili için çapraz-başvuru (cross-reference) aracı
 Summary(uk.UTF-8):	Утиліта для індексації та побудови посилань для мови C
 Name:		ctags
 Version:	5.8
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/ctags/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/ctags/%{name}-%{version}.tar.gz
 # Source0-md5:	c00f82ecdcc357434731913e5b48630d
 Patch0:		format-security.patch
+Patch1:		%{name}-5.7-segment-fault.patch
+Patch2:		%{name}-5.8-css.patch
+Patch3:		%{name}-5.8-ocaml-crash.patch
+Patch4:		%{name}-5.8-cssparse.patch
+Patch5:		%{name}-5.8-memmove.patch
+Patch6:		%{name}-CVE-2014-7204.patch
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf >= 1.12
 BuildRequires:	automake
@@ -131,6 +137,12 @@ Exuberant Ctags підтримує вивід файлу TAGS у стилі Emac
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
 
 %build
 %{__autoconf}
