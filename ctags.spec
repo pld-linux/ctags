@@ -20,10 +20,11 @@ Patch0:		branch.diff
 # Patch0-md5:	6a14a7eb89b1ef01f6849c9ad1fc169b
 Patch1:		%{name}-5.7-segment-fault.patch
 Patch2:		%{name}-5.8-css.patch
-Patch4:		%{name}-5.8-cssparse.patch
+Patch3:		%{name}-5.8-cssparse.patch
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf >= 1.12
 BuildRequires:	automake
+BuildRequires:	rpmbuild(macros) >= 1.402
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -138,7 +139,7 @@ Exuberant Ctags підтримує вивід файлу TAGS у стилі Emac
 %patch0 -p0
 #%patch1 -p1 recheck
 %patch2 -p1
-%patch4 -p1
+%patch3 -p1
 
 %build
 %{__autoconf}
@@ -156,9 +157,6 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}
-
-rm -f $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
-echo ".so man1/ctags.1" > $RPM_BUILD_ROOT%{_mandir}/man1/etags.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
