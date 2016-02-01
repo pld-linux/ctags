@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+package=ctags
 svn=svn://svn.code.sf.net/p/ctags/code
 tag=ctags-5.8
 out=branch.diff
@@ -29,9 +30,12 @@ echo >&2 "Revision $revno"
 sed -i -e "1i# Revision $revno" $out.tmp
 filter < $out.tmp > $out.tmp2 && mv -f $out.{tmp2,tmp}
 
-if cmp -s branch.diff{,.tmp}; then
+if cmp -s $out{,.tmp}; then
 	echo >&2 "No new diffs..."
-	rm -f branch.diff.tmp
+	rm -f $out.tmp
 	exit 0
 fi
-mv -f branch.diff{.tmp,}
+mv -f $out{.tmp,}
+
+../md5 $package.spec
+../dropin $out
