@@ -21,6 +21,7 @@ Patch0:		branch.diff
 Patch1:		%{name}-5.7-segment-fault.patch
 Patch2:		%{name}-5.8-css.patch
 Patch3:		%{name}-5.8-cssparse.patch
+Patch4:		attr.patch
 URL:		http://ctags.sourceforge.net/
 BuildRequires:	autoconf >= 1.12
 BuildRequires:	automake
@@ -140,6 +141,7 @@ Exuberant Ctags підтримує вивід файлу TAGS у стилі Emac
 #%patch1 -p1 recheck
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 %{__autoconf}

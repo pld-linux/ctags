@@ -1,0 +1,294 @@
+diff -ur ctags-5.8.orig/c.c ctags-5.8/c.c
+--- ctags-5.8.orig/c.c	2023-01-29 21:39:39.092029264 +0100
++++ ctags-5.8/c.c	2023-01-29 21:56:25.586429350 +0100
+@@ -619,7 +619,7 @@
+ 	return name;
+ }
+ 
+-static void __unused__ pt (tokenInfo *const token)
++static void ctags_attr_unused pt (tokenInfo *const token)
+ {
+ 	if (isType (token, TOKEN_NAME))
+ 		printf ("type: %-12s: %-13s   line: %lu\n",
+@@ -634,7 +634,7 @@
+ 			tokenString (token->type), token->lineNumber);
+ }
+ 
+-static void __unused__ ps (statementInfo *const st)
++static void ctags_attr_unused ps (statementInfo *const st)
+ {
+ 	unsigned int i;
+ 	printf ("scope: %s   decl: %s   gotName: %s   gotParenName: %s\n",
+diff -ur ctags-5.8.orig/debug.h ctags-5.8/debug.h
+--- ctags-5.8.orig/debug.h	2007-06-24 21:57:09.000000000 +0200
++++ ctags-5.8/debug.h	2023-01-29 21:54:58.442301695 +0100
+@@ -58,7 +58,7 @@
+ *   Function prototypes
+ */
+ extern void lineBreak (void);
+-extern void debugPrintf (const enum eDebugLevels level, const char *const format, ...) __printf__ (2, 3);
++extern void debugPrintf (const enum eDebugLevels level, const char *const format, ...) ctags_attr_printf (2, 3);
+ extern void debugPutc (const int level, const int c);
+ extern void debugParseNest (const boolean increase, const unsigned int level);
+ extern void debugCppNest (const boolean begin, const unsigned int level);
+diff -ur ctags-5.8.orig/eiffel.c ctags-5.8/eiffel.c
+--- ctags-5.8.orig/eiffel.c	2023-01-29 21:39:39.095362496 +0100
++++ ctags-5.8/eiffel.c	2023-01-29 21:56:12.003492590 +0100
+@@ -807,7 +807,7 @@
+ 
+ static boolean parseType (tokenInfo *const token);
+ 
+-static void parseGeneric (tokenInfo *const token, boolean declaration __unused__)
++static void parseGeneric (tokenInfo *const token, boolean declaration ctags_attr_unused)
+ {
+ 	unsigned int depth = 0;
+ #ifdef TYPE_REFERENCE_TOOL
+diff -ur ctags-5.8.orig/general.h ctags-5.8/general.h
+--- ctags-5.8.orig/general.h	2007-05-03 05:21:08.000000000 +0200
++++ ctags-5.8/general.h	2023-01-29 21:54:14.060256268 +0100
+@@ -57,11 +57,11 @@
+  *  to prevent warnings about unused variables.
+  */
+ #if (__GNUC__ > 2  ||  (__GNUC__ == 2  &&  __GNUC_MINOR__ >= 7)) && !defined (__GNUG__)
+-# define __unused__  __attribute__((unused))
+-# define __printf__(s,f)  __attribute__((format (printf, s, f)))
++# define ctags_attr_unused  __attribute__((unused))
++# define ctags_attr_printf(s,f)  __attribute__((format (printf, s, f)))
+ #else
+-# define __unused__
+-# define __printf__(s,f)
++# define ctags_attr_unused
++# define ctags_attr_printf(s,f)
+ #endif
+ 
+ /*
+diff -ur ctags-5.8.orig/lregex.c ctags-5.8/lregex.c
+--- ctags-5.8.orig/lregex.c	2023-01-29 21:39:39.082029568 +0100
++++ ctags-5.8/lregex.c	2023-01-29 21:56:52.985628533 +0100
+@@ -538,11 +538,11 @@
+ #endif  /* HAVE_REGEX */
+ 
+ extern void addTagRegex (
+-		const langType language __unused__,
+-		const char* const regex __unused__,
+-		const char* const name __unused__,
+-		const char* const kinds __unused__,
+-		const char* const flags __unused__)
++		const langType language ctags_attr_unused,
++		const char* const regex ctags_attr_unused,
++		const char* const name ctags_attr_unused,
++		const char* const kinds ctags_attr_unused,
++		const char* const flags ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	Assert (regex != NULL);
+@@ -564,10 +564,10 @@
+ }
+ 
+ extern void addCallbackRegex (
+-		const langType language __unused__,
+-		const char* const regex __unused__,
+-		const char* const flags __unused__,
+-		const regexCallback callback __unused__)
++		const langType language ctags_attr_unused,
++		const char* const regex ctags_attr_unused,
++		const char* const flags ctags_attr_unused,
++		const regexCallback callback ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	Assert (regex != NULL);
+@@ -581,7 +581,7 @@
+ }
+ 
+ extern void addLanguageRegex (
+-		const langType language __unused__, const char* const regex __unused__)
++		const langType language ctags_attr_unused, const char* const regex ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	if (! regexBroken)
+@@ -602,7 +602,7 @@
+ */
+ 
+ extern boolean processRegexOption (const char *const option,
+-								   const char *const parameter __unused__)
++								   const char *const parameter ctags_attr_unused)
+ {
+ 	boolean handled = FALSE;
+ 	const char* const dash = strchr (option, '-');
+@@ -624,7 +624,7 @@
+ 	return handled;
+ }
+ 
+-extern void disableRegexKinds (const langType language __unused__)
++extern void disableRegexKinds (const langType language ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	if (language <= SetUpper  &&  Sets [language].count > 0)
+@@ -639,8 +639,8 @@
+ }
+ 
+ extern boolean enableRegexKind (
+-		const langType language __unused__,
+-		const int kind __unused__, const boolean mode __unused__)
++		const langType language ctags_attr_unused,
++		const int kind ctags_attr_unused, const boolean mode ctags_attr_unused)
+ {
+ 	boolean result = FALSE;
+ #ifdef HAVE_REGEX
+@@ -660,7 +660,7 @@
+ 	return result;
+ }
+ 
+-extern void printRegexKinds (const langType language __unused__, boolean indent __unused__)
++extern void printRegexKinds (const langType language ctags_attr_unused, boolean indent ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	if (language <= SetUpper  &&  Sets [language].count > 0)
+diff -ur ctags-5.8.orig/lua.c ctags-5.8/lua.c
+--- ctags-5.8.orig/lua.c	2006-10-12 05:26:40.000000000 +0200
++++ ctags-5.8/lua.c	2023-01-29 21:56:09.113576927 +0100
+@@ -37,7 +37,7 @@
+ */
+ 
+ /* for debugging purposes */
+-static void __unused__ print_string (char *p, char *q)
++static void ctags_attr_unused print_string (char *p, char *q)
+ {
+ 	for ( ; p != q; p++)
+ 		fprintf (errout, "%c", *p);
+diff -ur ctags-5.8.orig/main.c ctags-5.8/main.c
+--- ctags-5.8.orig/main.c	2007-06-07 06:35:21.000000000 +0200
++++ ctags-5.8/main.c	2023-01-29 21:56:29.099660063 +0100
+@@ -522,7 +522,7 @@
+  *		Start up code
+  */
+ 
+-extern int main (int __unused__ argc, char **argv)
++extern int main (int ctags_attr_unused argc, char **argv)
+ {
+ 	cookedArgs *args;
+ #ifdef VMS
+diff -ur ctags-5.8.orig/options.c ctags-5.8/options.c
+--- ctags-5.8.orig/options.c	2007-09-05 04:00:44.000000000 +0200
++++ ctags-5.8/options.c	2023-01-29 21:55:59.927178263 +0100
+@@ -730,7 +730,7 @@
+ }
+ 
+ static void processExcludeOption (
+-		const char *const option __unused__, const char *const parameter)
++		const char *const option ctags_attr_unused, const char *const parameter)
+ {
+ 	const char *const fileName = parameter + 1;
+ 	if (parameter [0] == '\0')
+@@ -867,7 +867,7 @@
+ }
+ 
+ static void processFilterTerminatorOption (
+-		const char *const option __unused__, const char *const parameter)
++		const char *const option ctags_attr_unused, const char *const parameter)
+ {
+ 	freeString (&Option.filterTerminator);
+ 	Option.filterTerminator = stringCopy (parameter);
+@@ -930,8 +930,8 @@
+ }
+ 
+ static void processHelpOption (
+-		const char *const option __unused__,
+-		const char *const parameter __unused__)
++		const char *const option ctags_attr_unused,
++		const char *const parameter ctags_attr_unused)
+ {
+ 	printProgramIdentification ();
+ 	putchar ('\n');
+@@ -1139,8 +1139,8 @@
+ }
+ 
+ static void processLicenseOption (
+-		const char *const option __unused__,
+-		const char *const parameter __unused__)
++		const char *const option ctags_attr_unused,
++		const char *const parameter ctags_attr_unused)
+ {
+ 	printProgramIdentification ();
+ 	puts ("");
+@@ -1166,8 +1166,8 @@
+ }
+ 
+ static void processListMapsOption (
+-		const char *const __unused__ option,
+-		const char *const __unused__ parameter)
++		const char *const ctags_attr_unused option,
++		const char *const ctags_attr_unused parameter)
+ {
+ 	if (parameter [0] == '\0' || strcasecmp (parameter, "all") == 0)
+ 	    printLanguageMaps (LANG_AUTO);
+@@ -1183,8 +1183,8 @@
+ }
+ 
+ static void processListLanguagesOption (
+-		const char *const option __unused__,
+-		const char *const parameter __unused__)
++		const char *const option ctags_attr_unused,
++		const char *const parameter ctags_attr_unused)
+ {
+ 	printLanguageList ();
+ 	exit (0);
+@@ -1358,8 +1358,8 @@
+ }
+ 
+ static void processVersionOption (
+-		const char *const option __unused__,
+-		const char *const parameter __unused__)
++		const char *const option ctags_attr_unused,
++		const char *const parameter ctags_attr_unused)
+ {
+ 	printProgramIdentification ();
+ 	exit (0);
+diff -ur ctags-5.8.orig/options.h ctags-5.8/options.h
+--- ctags-5.8.orig/options.h	2007-09-05 04:00:44.000000000 +0200
++++ ctags-5.8/options.h	2023-01-29 21:55:10.711944997 +0100
+@@ -122,7 +122,7 @@
+ /*
+ *   FUNCTION PROTOTYPES
+ */
+-extern void verbose (const char *const format, ...) __printf__ (1, 2);
++extern void verbose (const char *const format, ...) ctags_attr_printf (1, 2);
+ extern void freeList (stringList** const pString);
+ extern void setDefaultTagFileName (void);
+ extern void checkOptions (void);
+diff -ur ctags-5.8.orig/parse.c ctags-5.8/parse.c
+--- ctags-5.8.orig/parse.c	2007-07-31 07:35:33.000000000 +0200
++++ ctags-5.8/parse.c	2023-01-29 21:56:18.749962319 +0100
+@@ -376,7 +376,7 @@
+ */
+ 
+ extern void processLanguageDefineOption (
+-		const char *const option, const char *const parameter __unused__)
++		const char *const option, const char *const parameter ctags_attr_unused)
+ {
+ #ifdef HAVE_REGEX
+ 	if (parameter [0] == '\0')
+diff -ur ctags-5.8.orig/routines.c ctags-5.8/routines.c
+--- ctags-5.8.orig/routines.c	2023-01-29 21:39:39.068696639 +0100
++++ ctags-5.8/routines.c	2023-01-29 21:56:04.163721350 +0100
+@@ -526,7 +526,7 @@
+ 
+ #if ! defined (HAVE_STAT_ST_INO)
+ 
+-static void canonicalizePath (char *const path __unused__)
++static void canonicalizePath (char *const path ctags_attr_unused)
+ {
+ #if defined (MSDOS_STYLE_PATH)
+ 	char *p;
+diff -ur ctags-5.8.orig/routines.h ctags-5.8/routines.h
+--- ctags-5.8.orig/routines.h	2007-06-07 06:35:21.000000000 +0200
++++ ctags-5.8/routines.h	2023-01-29 21:55:18.851708213 +0100
+@@ -85,7 +85,7 @@
+ extern void setExecutableName (const char *const path);
+ extern const char *getExecutableName (void);
+ extern const char *getExecutablePath (void);
+-extern void error (const errorSelection selection, const char *const format, ...) __printf__ (2, 3);
++extern void error (const errorSelection selection, const char *const format, ...) ctags_attr_printf (2, 3);
+ 
+ /* Memory allocation functions */
+ #ifdef NEED_PROTO_MALLOC
